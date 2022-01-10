@@ -2,8 +2,7 @@
 <img width="390" alt="glam_" src="https://user-images.githubusercontent.com/58536602/148776534-a3a8b2ce-793d-4a82-bb1c-2aa73010fbde.png">
 <img width="390" alt="glam_profile" src="https://user-images.githubusercontent.com/58536602/148776683-9be81162-0e9c-42bd-a1ff-99f5c1a8dded.png">
 
-<img width="1840" alt="source" src="https://user-images.githubusercontent.com/58536602/148777771-f695a9b7-de02-49e8-b933-4092fad0a906.png">
-
+![source](https://user-images.githubusercontent.com/58536602/148780392-e6f640f5-8d5f-4d07-be0d-08ff71a59e77.jpg)
 styled-components로 css3 style 구현 및 theme 활용.
 
 중첩 라우팅(Nested Routing)으로 페이지 내에서의 분기처리.
