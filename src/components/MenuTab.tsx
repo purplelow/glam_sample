@@ -46,7 +46,7 @@ return (
         <MenuList>
           <Menu>
             <Link to={{
-              pathname: `/glam`,
+              pathname: `/glam_sample`,
             }}>
               <img src={homeIcon} height="25"/>
             </Link>

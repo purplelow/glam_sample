@@ -112,15 +112,43 @@ function Glam() {
   //   })();
   // }, [])
   
+  // ==============if json-server = false => replace sample data 
+  const data1 =[
+      {
+        "id": "userA",
+        "name": "도깨비",
+        "age": 903,
+        "typeA": "웃음이 많아요",
+        "typeB": "잘 놀아요",
+        "typeC": "자유로워요"
+      },
+      {
+        "id": "userB",
+        "name": "저승사자",
+        "age": 901,
+        "typeA": "웃음이 없어요",
+        "typeB": "혼자 잘 놀아요",
+        "typeC": "예의가 발라요"
+      },
+      {
+        "id": "userC",
+        "name": "사람",
+        "age": 33,
+        "typeA": "운동을 좋아해요",
+        "typeB": "사람들과 잘 어울려요",
+        "typeC": "매너와 센스, 유머를 겸비하고 있어요"
+      }
+    ];
+  
   return (
     <>
       {/* 메인 피드 */}
       <TodayTitle>오늘의 추천</TodayTitle>
-      {isLoading ? (
+      {/* {isLoading ? (
         "Loading..."
-      ) : (
+      ) : ( */}
         <ContentsList>
-          {data?.map((user) => (
+          {data1?.map((user) => (
             <Contents key={user.id}>
               <UserInfoWrapper>
                 <UserNameAge>
@@ -138,7 +166,7 @@ function Glam() {
             </Contents>
           ))}
         </ContentsList>
-      )}
+      {/* )} */}
         
     </>
   );
