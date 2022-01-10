@@ -48,7 +48,7 @@ const Headertab = styled.li<{ isActive: boolean }>`
 `;
 
 function GlamMain() {
-  const thisMatch = useRouteMatch("/glam");
+  const thisMatch = useRouteMatch("/glam_sample");
   const nearMatch = useRouteMatch("/near");
   const feedMatch = useRouteMatch("/feed");
   return (
@@ -57,7 +57,7 @@ function GlamMain() {
         <Header>
           <HeaderTabList>
             <Headertab isActive={thisMatch !== null}>
-              <Link to={`/glam`}>
+              <Link to={`/glam_sample`}>
                 glam
               </Link>
             </Headertab>
@@ -76,7 +76,7 @@ function GlamMain() {
           </HeaderTabList>
         </Header>
         <Switch>
-          <Route path={`/glam`}>
+          <Route path={`/glam_sample`}>
             <Glam />
           </Route>
           <Route path={`/near`}>
