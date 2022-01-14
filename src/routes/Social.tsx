@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
-import { fetchGlamFeed } from "../api";
-import ImgA from '../assets/img1.png';
-import InfoImg from '../assets/info.png';
-import LinkImg from '../assets/link.png';
+import { fetchSocialFeed } from "../api";
+import ImgA from '../assets/img/img1.png';
+import InfoImg from '../assets/img/info.png';
+import LinkImg from '../assets/img/link.png';
 
 const TodayTitle = styled.h3`
   font-size: 16px;
@@ -17,7 +17,7 @@ const ContentsList = styled.div`
 `;
 const Contents = styled.div`
   width: 100%;
-  height: 500px;
+  height: 550px;
   background: linear-gradient(
     to bottom, 
     rgba(20, 20, 20, 0) 10%,
@@ -66,7 +66,7 @@ const UserType = styled.span`
 const LikeBtn = styled.button`
   width: 60%;
   height: 40px;
-  background-color: #3498db;
+  background-color: #ff7675;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -81,7 +81,7 @@ const RejectedBtn = styled(LikeBtn)`
   font-weight: 900;
 `;
 const LinkBtn = styled(RejectedBtn)`
-  background-color: #3498db;
+  background-color: #ff7675;
   background-image: url(${LinkImg});
   background-size: 40%;
   background-position: center;
@@ -97,9 +97,9 @@ interface IUsers {
   typeC: string,
 }
 
-function Glam() {
-  const { isLoading, data } = useQuery<IUsers[]>("user", fetchGlamFeed);
-  // console.log(fetchGlamFeed());
+function Social() {
+  const { isLoading, data } = useQuery<IUsers[]>("user", fetchSocialFeed);
+  // console.log(fetchSocialFeed());
   // const [loading, setLoading] = useState(true)
   // const [userInfo, setUserInfo] = useState<IUsers[]>([]);
   // useEffect(() => {
@@ -172,4 +172,4 @@ function Glam() {
   );
 }
 
-export default Glam;
+export default Social;

@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import MenuTab from '../components/MenuTab';
+import Modal from '../components/Modal';
 
 const Container = styled.div`
   padding: 60px 0 80px;
@@ -73,8 +75,9 @@ const UserProfileTitle = styled.span`
   padding: 15px 0 15px 35px;
 `;
 const UserProfileTxt = styled.span`
-
+  color: #ff7675;
 `;
+
 const UserIntro = styled.textarea`
   width: 100%;
   height: auto;
@@ -91,12 +94,21 @@ const UserIntroInfoText = styled(ProfileImgInfoText)`
 // const ProfileImages
 
 function ProfileEdit() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = () => {
+    setModalOpen(true);
+  }
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+  const [profileValue, setProfileValue] = useState("");
   return (
     <>
       <Container>
         <Header>
           <Title>프로필 수정</Title>
         </Header>
+        <form>
         <ProfileImgList>
           <ProfileImg></ProfileImg>
 
@@ -117,7 +129,16 @@ function ProfileEdit() {
         <UserProfileList>
           <UserProfile>
             <UserProfileTitle>닉네임</UserProfileTitle>
-            <UserProfileTxt>J</UserProfileTxt>
+            <UserProfileTxt onClick={openModal}>
+                {profileValue}입력
+                
+              <Modal open={modalOpen} close={closeModal} header="Modal heading">
+                  <input
+                    value={profileValue}
+                    onChange={(e) => setProfileValue(e.target.value)}
+                />
+              </Modal>
+            </UserProfileTxt>
           </UserProfile>
           <UserProfile>
             <UserProfileTitle>성별</UserProfileTitle>
@@ -199,8 +220,10 @@ function ProfileEdit() {
             <UserProfileTitle>인종</UserProfileTitle>
             <UserProfileTxt>선택해주세요</UserProfileTxt>
           </UserProfile>
-        </UserProfileList>
-
+          </UserProfileList>
+          
+          <button>저장하기</button>
+        </form>
       </Container>
 
       {/* 공통 하단 메뉴탭 */}

@@ -6,9 +6,9 @@ import {
   useRouteMatch,
 } from 'react-router-dom';
 import styled from 'styled-components';
-import { fetchGlamFeed } from '../api';
+import { fetchSocialFeed } from '../api';
 import MenuTab from '../components/MenuTab';
-import Glam from './Glam';
+import Social from './Social';
 import Near from './Near';
 import Feed from './Feed';
 
@@ -47,8 +47,8 @@ const Headertab = styled.li<{ isActive: boolean }>`
   }
 `;
 
-function GlamMain() {
-  const thisMatch = useRouteMatch("/glam_sample");
+function SocialMain() {
+  const thisMatch = useRouteMatch("/social_sample");
   const nearMatch = useRouteMatch("/near");
   const feedMatch = useRouteMatch("/feed");
   return (
@@ -57,8 +57,8 @@ function GlamMain() {
         <Header>
           <HeaderTabList>
             <Headertab isActive={thisMatch !== null}>
-              <Link to={`/glam_sample`}>
-                glam
+              <Link to={`/social_sample`}>
+                Social
               </Link>
             </Headertab>
 
@@ -76,8 +76,8 @@ function GlamMain() {
           </HeaderTabList>
         </Header>
         <Switch>
-          <Route path={`/glam_sample`}>
-            <Glam />
+          <Route path={`/social_sample`}>
+            <Social />
           </Route>
           <Route path={`/near`}>
             <Near />
@@ -94,4 +94,4 @@ function GlamMain() {
   );
 }
 
-export default GlamMain;
+export default SocialMain;

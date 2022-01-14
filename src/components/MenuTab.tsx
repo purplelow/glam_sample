@@ -1,11 +1,11 @@
 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import homeIcon from '../assets/home.png';
-import liveIcon from '../assets/live.png';
-import likeIcon from '../assets/like.png';
-import chatIcon from '../assets/chat.png';
-import profileIcon from '../assets/profile.png';
+import homeIcon from '../assets/img/home.png';
+import liveIcon from '../assets/img/live.png';
+import likeIcon from '../assets/img/like.png';
+import chatIcon from '../assets/img/chat.png';
+import profileIcon from '../assets/img/profile.png';
 
 const MenuTabWraper = styled.div`
   position: fixed;
@@ -46,7 +46,7 @@ return (
         <MenuList>
           <Menu>
             <Link to={{
-              pathname: `/glam_sample`,
+              pathname: `/social_sample`,
             }}>
               <img src={homeIcon} height="25"/>
             </Link>
@@ -54,7 +54,7 @@ return (
 
           <Menu>
             <Link to={{
-              pathname: `/glam/userId.Live`,
+              pathname: `/social/userId.Live`,
             }}>
               <img src={liveIcon} height="25"/>
             </Link>
@@ -62,7 +62,7 @@ return (
 
           <Menu>
             <Link to={{
-              pathname: `/glam/userId.Like`,
+              pathname: `/social/userId.Like`,
             }}>
               <img src={likeIcon} height="25"/>
             </Link>
@@ -70,7 +70,7 @@ return (
 
           <Menu>
             <Link to={{
-              pathname: `/glam/userId.Chat`,
+              pathname: `/social/userId.Chat`,
             }}>
               <img src={chatIcon} height="25"/>
             </Link>

@@ -1,1 +1,1 @@
-# Glam Sample
+# Social Sample

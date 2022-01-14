@@ -51,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
   }
   * {
     box-sizing: border-box;
+    outline: none;
   }
   a {
     text-decoration: none;

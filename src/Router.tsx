@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import GlamMain from './routes/GlamMain';
+import SocialMain from './routes/SocialMain';
 import ProfileEdit from './routes/ProfileEdit';
 
 function Router() {
@@ -10,7 +10,7 @@ function Router() {
           <ProfileEdit />
         </Route>
         <Route path="/">
-          <GlamMain />
+          <SocialMain />
         </Route>
       </Switch>
     </BrowserRouter>
